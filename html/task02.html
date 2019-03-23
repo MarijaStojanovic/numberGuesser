@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task02</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        let numberOfGuesses = 3;
+        let randomNumber = Math.floor(Math.random() * 11);
+
+        guessNumber = () => {
+            let yourNumber = document.getElementById('number').value;
+            numberOfGuesses--;
+            if (yourNumber === randomNumber) {
+                alert(`Success!!! Good job!!!`);
+            } else {
+                document.getElementById('message').innerHTML = `Wrong answer, try again! Number of guesses ${numberOfGuesses}`;
+                document.getElementById('number').value = '';
+                if (numberOfGuesses === 0) {
+                    document.getElementById('message').innerHTML = `Game over!!!`;
+                }
+
+            }
+            return 
+        }
+        
+
+
+       
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <input type="number" placeholder="Enter a number" id="number">
+        <input type="button" value="Submit" onclick="guessNumber()"> 
+        <p id="message"></p>
+
+    </div>
+
+
+    <!--<script src="script.js"> </script>-->
+</body>
+
+
+</html>
