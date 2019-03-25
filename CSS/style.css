@@ -1,0 +1,22 @@
+*{
+    background-color: lightgray;
+}
+
+input[type=number] {
+    border-radius: 4px;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+}
+
+button,
+input[type=button] {
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: lightgoldenrodyellow;
+}
+
+p {
+    font-size: 20px;
+}
